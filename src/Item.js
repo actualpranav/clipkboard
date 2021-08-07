@@ -17,7 +17,8 @@ const Item = forwardRef( ({item, username},ref)  => {
      color = "primary"
      variant = "h5"
      component = "h2">
-      {item.username} : {item.item}
+      {/* {item.username} : {item.item} */}
+      {!isUser && `${item.username || 'Unknown User'}: ` } {item.item}
      </Typography>
     </CardContent>
   </Card>

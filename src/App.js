@@ -18,7 +18,7 @@ function App() {
   
   useEffect(() => {
     db.collection('items').orderBy('timestamp','desc').onSnapshot(snapshot =>{
-      setItem(snapshot.docs.map(doc => doc.data()))
+      setItem(snapshot.docs.map(doc => ({id: doc.id , item: doc.data()})))
     })
   }, [])
 
@@ -44,12 +44,14 @@ function App() {
       <Header/>
       <h2>Hey        Hello</h2>
       <h2>welcome {username}</h2>
+      <form action="" className="app__form">
 
       <FormControl>
       <InputLabel>Enter Item</InputLabel>
         <Input value={input} onChange = {event => setInput(event.target.value)} />
         <Button disabled={!input} variant="contained" color="primary"  type='submit'onClick ={addItem}>Set Item</Button>
       </FormControl>
+      </form>
 
       {/* <form >
       <input value={input} onChange = {event => setInput(event.target.value)}/>
@@ -60,9 +62,10 @@ function App() {
       <Flipmove>
 
       {
-        items.map(item => (
+        // items.map(item => (
+        items.map(({id, item})=> (
           
-          <Item username={username} item={item}/>
+          <Item key = {id} username={username} item={item}/>
           ))
         }
         </Flipmove>
