@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import "./Header.css";
 
 function Header() {
- return (
-  <div>
-   <h2>Header</h2>
-  </div>
- )
+  return (
+    <div className="header">
+      <img className="header__img" src="./logo000.png" alt="" />
+    </div>
+  );
 }
 
-export default Header
+export default Header;
