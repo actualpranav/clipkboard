@@ -20,7 +20,7 @@
 }
 
 .message__guestCard {
-  display: none;
+  /* display: none; */
   visibility: unset;
   background-color: #e9e9eb !important;
 }
@@ -30,8 +30,9 @@
   /* text-transform: uppercase; */
   font-family: "Exo 2", sans-serif;
   font-weight: 300;
-  font-size: 30px;
-  display: inline-block;
+  font-size: 20px;
+  /* display: inline-block; */
+  display: flex;
   position: relative;
   text-align: center;
   /* color: #00c7ec; */

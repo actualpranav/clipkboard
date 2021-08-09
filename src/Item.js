@@ -1,14 +1,14 @@
-import { Card, CardContent, Typography } from "@material-ui/core";
-import React, { useState, forwardRef } from "react";
+// import { Card, CardContent, Typography } from "@material-ui/core";
+import React, { forwardRef } from "react";
 import "./Item.css";
 import { CopyToClipboard } from "react-copy-to-clipboard";
-import FileCopyIcon from "@material-ui/icons/FileCopy";
+// import FileCopyIcon from "@material-ui/icons/FileCopy";
 
 // function Item(props) { message
 // function Item({item, username}) {
 const Item = forwardRef(({ item, username }, ref) => {
   const isUser = username === item.username;
-  const isItem = item === item.item;
+  // const isItem = item === item.item;
   // const [copyItem, setCopy] = useState({ value: "", copied: false });
 
   return (
