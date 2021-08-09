@@ -1,8 +1,26 @@
 .App {
   text-align: center;
-  background: url("https://cdn.pixabay.com/photo/2018/04/28/22/03/tree-3358468_960_720.jpg");
+  background: #bdc3c7; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #2c3e50,
+    #bdc3c7
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #2c3e50,
+    /* #bdc3c7, */ #82878a
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.blur {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  height: 100%;
+  width: 100%;
   background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: fixed;
+  background-repeat: repeat;
+  background-position: fixed center;
   background-attachment: fixed;
+  filter: brightness(90%);
+  backdrop-filter: blur(5px);
 }
